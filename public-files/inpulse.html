@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento para Licitación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            display: -webkit-flex;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin: auto;
+        }
+
+        .text-column {
+            width: 40%;
+        }
+
+        .video-column {
+            width: 100%; 
+            height: 100%;
+            display: flex;
+        }
+
+        .video-column iframe {
+            width: 100%;
+            height: 650px; 
+            border: none;
+        }    
+      
+
+        .collapsible {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .collapsible:hover {
+            background: rgba(0, 85, 184, .4)
+        }
+
+        .icon {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+            transition: transform 0.3s ease; 
+            -webkit-transition: -webkit-transform 0.3s ease;
+        }
+
+        .icon.rotated {
+            transform: rotate(45deg); 
+            -webkit-transform: rotate(45deg); 
+        }
+
+        .content {
+            max-height: 0;
+            opacity: 0; 
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.2s ease-in-out,padding 0.4s ease, margin-bottom 0.4s ease;
+            -webkit-transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.4s ease, margin-bottom 0.4s ease;
+            padding: 0 15px;
+            margin-bottom: 0;
+            background: #eee;
+            border-left: 4px solid #888;
+        }
+
+        .content.active {
+            opacity: 1;
+            max-height: 1000px; 
+            margin-bottom: 10px; 
+            padding: 10px 15px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .video-column {
+                width: 100%;
+            }
+
+            .video-column iframe {
+            width: 100%;
+            height:300px
+            }  
+
+            .text-column {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Columna de Texto -->
+    <div class="text-column">
+        <div class="collapsible" onclick="toggleContent(1)">
+            <svg class="icon" id="icon1" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12h14"></path>
+            </svg>
+            <span>1. Tela Skin+</span>
+        </div>
+        <div class="content" id="content1">
+            <p><strong>¿Qué es?</strong> Tela tratada para cuidar la piel.</p>
+            <p><strong>¿Para qué sirve?</strong> Mantiene la piel hidratada y suave.</p>
+        </div>
+    
+        <div class="collapsible" onclick="toggleContent(2)">
+            <svg class="icon" id="icon2" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12h14"></path>
+            </svg>
+            <span>2. Acolchado Tack & Jump</span>
+        </div>
+        <div class="content" id="content2">
+            <p><strong>¿Qué es?</strong> Acolchado con patrones suaves y duraderos.</p>
+            <p><strong>¿Para qué sirve?</strong> Aumenta el confort y la vida útil del colchón.</p>
+        </div>
+    
+        <div class="collapsible" onclick="toggleContent(3)">
+            <svg class="icon" id="icon3" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12h14"></path>
+            </svg>
+            <span>3. Sensores Smart</span>
+        </div>
+        <div class="content" id="content3">
+            <p><strong>¿Qué es?</strong> Monitorean tu salud y el ambiente.</p>
+            <p><strong>¿Para qué sirve?</strong> Brinda consejos personalizados a través de una APP para un mejor sueño.</p>
+        </div>
+    
+        <div class="collapsible" onclick="toggleContent(4)">
+            <svg class="icon" id="icon4" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12h14"></path>
+            </svg>
+            <span>4. Box Top Suave</span>
+        </div>
+        <div class="content" id="content4">
+            <p><strong>¿Qué es?</strong> Capas de espuma y fibra extra suaves.</p>
+            <p><strong>¿Para qué sirve?</strong> Ofrece mayor confort en la superficie.</p>
+        </div>
+    
+        <div class="collapsible" onclick="toggleContent(5)">
+            <svg class="icon" id="icon5" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12h14"></path>
+            </svg>
+            <span>5. Memory Foam con Gel</span>
+        </div>
+        <div class="content" id="content5">
+            <p><strong>¿Qué es?</strong> Espuma con gel refrescante.</p>
+            <p><strong>¿Para qué sirve?</strong> Regula la temperatura para un sueño fresco.</p>
+        </div>
+    
+        <div class="collapsible" onclick="toggleContent(6)">
+            <svg class="icon" id="icon6" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12h14"></path>
+            </svg>
+            <span>6. Lámina de Látex</span>
+        </div>
+        <div class="content" id="content6">
+            <p><strong>¿Qué es?</strong> Material que se adapta al cuerpo.</p>
+            <p><strong>¿Para qué sirve?</strong> Reduce presión y mejora la postura.</p>
+        </div>
+    
+        <div class="collapsible" onclick="toggleContent(7)">
+            <svg class="icon" id="icon7" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12h14"></path>
+            </svg>
+            <span>7. Espuma de Alta Densidad</span>
+        </div>
+        <div class="content" id="content7">
+            <p><strong>¿Qué es?</strong> Espuma que brinda soporte extra.</p>
+            <p><strong>¿Para qué sirve?</strong> Mejora la adaptabilidad al cuerpo.</p>
+        </div>
+    
+        <div class="collapsible" onclick="toggleContent(8)">
+            <svg class="icon" id="icon8" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12h14"></path>
+            </svg>
+            <span>8. Espuma de Soporte</span>
+        </div>
+        <div class="content" id="content8">
+            <p><strong>¿Qué es?</strong> Capa firme que refuerza el colchón.</p>
+            <p><strong>¿Para qué sirve?</strong> Aumenta estabilidad y soporte general.</p>
+        </div>
+    
+        <div class="collapsible" onclick="toggleContent(9)">
+            <svg class="icon" id="icon9" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12h14"></path>
+            </svg>
+            <span>9. Pocket Coil Dual</span>
+        </div>
+        <div class="content" id="content9">
+            <p><strong>¿Qué es?</strong> Resortes individuales envueltos.</p>
+            <p><strong>¿Para qué sirve?</strong> Elimina movimiento y mejora el soporte.</p>
+        </div>
+    
+        <div class="collapsible" onclick="toggleContent(10)">
+            <svg class="icon" id="icon10" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12h14"></path>
+            </svg>
+            <span>10. Foam Encasement</span>
+        </div>
+        <div class="content" id="content10">
+            <p><strong>¿Qué es?</strong> Marco de espuma en los bordes.</p>
+            <p><strong>¿Para qué sirve?</strong> Refuerza los bordes para mayor estabilidad.</p>
+        </div>
+    
+        <div class="collapsible" onclick="toggleContent(11)">
+            <svg class="icon" id="icon11" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12h14"></path>
+            </svg>
+            <span>11. Plancha de Espuma Resistente</span>
+        </div>
+        <div class="content" id="content11">
+            <p><strong>¿Qué es?</strong> Capa sólida y robusta.</p>
+            <p><strong>¿Para qué sirve?</strong> Aumenta durabilidad y soporte.</p>
+        </div>
+    </div>
+
+    <!-- Columna del Video -->
+    <div class="video-column">
+        <iframe
+        src="https://www.youtube.com/embed/CLl5oRWuCPI?rel=0&controls=1&modestbranding=1&autoplay=1&loop=1&mute=1&playlist=CLl5oRWuCPI"
+        allow="autoplay; encrypted-media"
+        frameborder="0"
+        allowfullscreen
+        ></iframe>
+    </div>
+</div>
+
+<script>
+    function toggleContent(id) {
+        const content = document.getElementById('content' + id);
+        const icon = document.getElementById('icon' + id);
+
+        if (content.classList.contains('active')) {
+            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.opacity = "1"; 
+            requestAnimationFrame(() => {
+                content.style.maxHeight = "0"; 
+                content.style.opacity = "0"; 
+            });
+
+
+            content.addEventListener('transitionend', function reset() {
+                content.style.maxHeight = ""; 
+                content.removeEventListener('transitionend', reset);
+            }, { once: true });
+
+            content.classList.remove('active');
+            icon.classList.remove('rotated');
+        } else {
+
+            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.opacity = "1";
+            content.classList.add('active');
+
+
+            content.addEventListener('transitionend', function setAuto() {
+                content.style.maxHeight = "none";
+                content.removeEventListener('transitionend', setAuto);
+            }, { once: true });
+
+            icon.classList.add('rotated');
+        }
+    }
+</script>
+</body>
+</html>

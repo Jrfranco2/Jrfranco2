@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Table with Video</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 50px; /* Aquí se establece la separación entre los elementos */
+		      	margin-top: 50px;
+        }
+
+        .video-container {
+            flex: 1 1 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+           
+            padding: 10px;
+        }
+
+        iframe {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
+            max-width: 700px;
+            max-height: 393px;
+        }
+
+        .table-container {
+            flex: 1 1 45%;
+            overflow-x: auto;
+            width: 100%;
+			
+        }
+      
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        table, th, td {
+            border: none;
+        }
+      
+      
+tr {
+    border-bottom: 1px solid #ddd; /* Línea horizontal debajo de cada fila */
+}
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        
+
+        /* Asignar ancho a las columnas */
+        th:nth-child(1), td:nth-child(1) {
+            width: 5%;
+        }
+
+        th:nth-child(2), td:nth-child(2) {
+            width: 25%;
+        }
+
+        th:nth-child(3), td:nth-child(3) {
+            width: 35%;
+          
+        }
+
+        th:nth-child(4), td:nth-child(4) {
+            width: 35%;
+        }
+      tr:nth-child(2) {
+    background-color: #f2f2f2; /* Fondo gris claro */
+    color: black; /* Texto negro */
+}
+tr:nth-child(4) {
+    background-color: #f2f2f2; /* Fondo gris claro */
+    color: black; /* Texto negro */
+}
+      tr:nth-child(6) {
+    background-color: #f2f2f2; /* Fondo gris claro */
+    color: black; /* Texto negro */
+}
+      tr:nth-child(8) {
+    background-color: #f2f2f2; /* Fondo gris claro */
+    color: black; /* Texto negro */
+}
+      tr:nth-child(10) {
+    background-color: #f2f2f2; /* Fondo gris claro */
+    color: black; /* Texto negro */
+}
+      tr:nth-child(12) {
+    background-color: #f2f2f2; /* Fondo gris claro */
+    color: black; /* Texto negro */
+}
+      thead tr:first-child {
+    border-bottom: 0;
+        
+}
+      .svg-icon {
+  width: 20px;  /* Ajusta el tamaño a 30px */
+  height: 20px; /* Ajusta el tamaño a 30px */
+  vertical-align: middle;  /* Centra el SVG con el texto */
+  
+}
+      
+        /* Example font size classes */
+        .font-small {
+            font-size: 11px;
+        }
+
+        .font-medium {
+            font-size: 11px;
+        }
+
+        .font-large {
+            font-size: 11px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .video-container, .table-container {
+                flex: 1 1 100%;
+            }
+
+            iframe {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+      
+      .title-container {
+            text-align: left; /* Centra el título */
+            margin: 20px 40px; /* Espaciado superior e inferior */
+        }
+
+        .title-container h1 {
+            font-size: 36px; /* Tamaño del título */
+            color: #1C3F94; /* Color azul */
+            font-weight: bold; /* Negrita */
+            margin: 0; /* Elimina márgenes adicionales */
+        }
+      
+      
+    </style>
+</head>
+<body>
+  
+   <div class="title-container">
+        <h1>Dreamer Smart</h1>
+    </div>
+
+  
+    <div class="container">
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FAHBZYCoCtE?si=7CIiiUgCre7xjS0B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="font-large" style="background-color: white;"></th>
+                        <th class="font-large" style="background-color: #1C3F94; border-right: 1px solid white; color: white;">Tecnología</th>
+                        <th class="font-large" style="background-color: #1C3F94; border-right: 1px solid white; color: white;">¿Qué es?</th>
+                        <th class="font-large" style="background-color: #1C3F94; border-right: 0px solid white; color: white;">¿Para qué sirve?</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="font-large" style="font-size: 16px; font-weight: bold; text-align: center; color: #1C3F94;">1</td>
+                        <td class="font-medium">Tela Skin+</td>
+                        <td class="font-small">Tela tratada para cuidar la piel.</td>
+                        <td class="font-medium">Mantiene la piel hidratada y suave.</td>
+                    </tr>
+                    <tr>
+                         <td class="font-large" style="font-size: 16px; font-weight: bold; text-align: center; color: #1C3F94;">2</td>
+                        <td class="font-medium">Acolchado Tack & Jump</td>
+                        <td class="font-small">Acolchado con patrones suaves y duraderos.</td>
+                        <td class="font-medium">Aumenta el confort y la vida útil del colchón.</td>
+                    </tr>
+                    <tr>
+                         <td class="font-large" style="font-size: 16px; font-weight: bold; text-align: center; color: #1C3F94;">3</td>
+                        <td class="font-medium">Sensores Smart</td>
+                        <td class="font-small">Monitorean tu salud y el ambiente.</td>
+                        <td class="font-medium">Brinda consejos personalizados a través de una APP para un mejor sueño.</td>
+                    </tr>
+                    <tr>
+                         <td class="font-large" style="font-size: 16px; font-weight: bold; text-align: center; color: #1C3F94;">4</td>
+                        <td class="font-medium">Box Top Suave</td>
+                        <td class="font-small">Capas de espuma y fibra extra suaves.</td>
+                        <td class="font-medium">Ofrece mayor confort en la superficie.</td>
+                    </tr>
+                    <tr>
+                        <td class="font-large" style="font-size: 16px; font-weight: bold; text-align: center; color: #1C3F94;">5</td>
+                        <td class="font-medium">Memory Foam con Gel</td>
+                        <td class="font-small">Espuma con gel refrescante.</td>
+                        <td class="font-medium">Regula la temperatura para un sueño fresco.</td>
+                    </tr>
+                    <tr>
+                         <td class="font-large" style="font-size: 16px; font-weight: bold; text-align: center; color: #1C3F94;">6</td>
+                        <td class="font-medium">Lámina de Látex</td>
+                        <td class="font-small">Material que se adapta al cuerpo.</td>
+                        <td class="font-medium">Reduce presión y mejora la postura.</td>
+                    </tr>
+                    <tr>
+                         <td class="font-large" style="font-size: 16px; font-weight: bold; text-align: center; color: #1C3F94;">7</td>
+                        <td class="font-medium">Espuma de Alta Densidad</td>
+                        <td class="font-small">Espuma que brinda soporte extra.</td>
+                        <td class="font-medium">Mejora la adaptabilidad al cuerpo.</td>
+                    </tr>
+                    <tr>
+                         <td class="font-large" style="font-size: 16px; font-weight: bold; text-align: center; color: #1C3F94;">8</td>
+                        <td class="font-medium">Espuma de Soporte</td>
+                        <td class="font-small">Capa firme que refuerza el colchón.</td>
+                        <td class="font-medium">Aumenta estabilidad y soporte general.</td>
+                    </tr>
+                    <tr>
+                         <td class="font-large" style="font-size: 16px; font-weight: bold; text-align: center; color: #1C3F94;">9</td>
+                        <td class="font-medium">Pocket Coil Dual</td>
+                        <td class="font-small">Resortes individuales envueltos.</td>
+                        <td class="font-medium">Elimina movimiento y mejora el soporte.</td>
+                    </tr>
+                    <tr>
+                         <td class="font-large" style="font-size: 16px; font-weight: bold; text-align: center; color: #1C3F94;">10</td>
+                        <td class="font-medium">Foam Encasement</td>
+                        <td class="font-small">Marco de espuma en los bordes.</td>
+                        <td class="font-medium">Refuerza los bordes para mayor estabilidad.</td>
+                    </tr>
+                    <tr>
+                         <td class="font-large" style="font-size: 16px; font-weight: bold; text-align: center; color: #1C3F94;">11</td>
+                        <td class="font-medium">Plancha de Espuma Resistente</td>
+                        <td class="font-small">Capa sólida y robusta.</td>
+                        <td class="font-medium">Aumenta durabilidad y soporte.</td>
+                    </tr>
+                    <tr>
+                         <td class="font-large" style="font-size: 16px; font-weight: bold; text-align: center; color: #1C3F94;">12</td>
+                        <td class="font-medium">Plancha de Espuma Resistente</td>
+                        <td class="font-small">Una capa de espuma que refuerza el colchón.</td>
+                        <td class="font-medium">Aumenta la resistencia del colchón y mejora su capacidad para soportar peso.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
